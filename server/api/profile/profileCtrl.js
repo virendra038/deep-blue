@@ -9,9 +9,9 @@
     var uuid = require('node-uuid');
 
 
-    module.exports.login = function (req, res, next) {
+    module.exports.profile = function (req, res, next) {
 
-        res.send("login");
+        res.send("profile");
 
     };
 

@@ -7,7 +7,7 @@
     var router = express.Router();
 
 
-    router.post('/login', controller.login);
+    router.get('/profile', controller.profile);
 
     module.exports = router;
 

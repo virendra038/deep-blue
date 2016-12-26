@@ -11,6 +11,7 @@
         scss: ['assets/scss/base.scss'],
 
         allscss: ['app/**/*.scss',
+            'app/account/**/*.scss',
             'assets/scss/*.scss'],
 
         index: './index.html',

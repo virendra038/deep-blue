@@ -9,7 +9,6 @@
                                <md-content class="md-padding">
                                    <form action="" name="loginForm">
                                        <md-input-container class="block">
-                                           <md-input-container>
                                                <label>Email address</label>
                                                <input ng-model="dialog.userEmail"
                                                       ng-click="dialog.loginUserError = false"
@@ -23,7 +22,6 @@
                                                    <div ng-message="pattern">Email address is not valid.</div>
                                                    <div ng-show="dialog.loginUserError" class="customError2">{{dialog.loginError}}</div>
                                                </div>
-                                           </md-input-container>
                                        </md-input-container>
                                        <md-input-container class="block">
                                            <label class="text-left">Password</label>
