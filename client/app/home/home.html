@@ -1,0 +1,106 @@
+<div class="row banner-image">
+   <div class="login-signup-card center">
+       <md-card>
+           <md-card-content>
+               <div ng-cloak>
+                   <md-content>
+                       <md-tabs md-dynamic-height md-border-bottom>
+                           <md-tab label="login">
+                               <md-content class="md-padding">
+                                   <form action="" name="loginForm">
+                                       <md-input-container class="block">
+                                           <md-input-container>
+                                               <label>Email address</label>
+                                               <input ng-model="dialog.userEmail"
+                                                      ng-click="dialog.loginUserError = false"
+                                                      name="email"
+                                                      type="email"
+                                                      ng-pattern='/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/'
+                                                      required>
+
+                                               <div ng-messages="loginForm.email.$error" ng-show="loginForm.email.$dirty || dialog.logbtn">
+                                                   <div ng-message="required">Email address is required.</div>
+                                                   <div ng-message="pattern">Email address is not valid.</div>
+                                                   <div ng-show="dialog.loginUserError" class="customError2">{{dialog.loginError}}</div>
+                                               </div>
+                                           </md-input-container>
+                                       </md-input-container>
+                                       <md-input-container class="block">
+                                           <label class="text-left">Password</label>
+                                           <input ng-model="dialog.password" type="password" name="password" required="">
+
+                                           <div ng-messages="loginForm.password.$error" class="text-left"
+                                                ng-show="loginForm.password.$dirty || dialog.logbtn">
+                                               <div ng-message="required">Password is required.</div>
+                                           </div>
+                                       </md-input-container>
+                                       <md-button class="md-primary md-raised block">
+                                           Submit
+                                       </md-button>
+                                   </form>
+                               </md-content>
+                           </md-tab>
+                           <md-tab label="register">
+                               <md-content class="md-padding">
+                                   <form action="" name="signUpForm">
+                                       <md-input-container class="block">
+                                           <label class="text-left">Email address</label>
+                                           <input ng-model="dialog.email"
+                                                  ng-click="dialog.signupUserError = false"
+                                                  type="email"
+                                                  name="email"
+                                                  ng-pattern='/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/'
+                                                  required=""
+                                                  ng-blur="dialog.checkEmailExistance()">
+
+                                           <div ng-messages="signUpForm.email.$error"
+                                                ng-show="signUpForm.email.$dirty || dialog.regbtn">
+                                               <div ng-message="required">Email address is required.</div>
+                                               <div ng-message="pattern">Email address is not valid.</div>
+                                               <div ng-show="dialog.signupUserError" class="customError2">{{dialog.signupError}}</div>
+                                           </div>
+                                       </md-input-container>
+                                       <md-input-container class="block">
+                                           <label class="text-left">Password</label>
+                                           <input ng-model="dialog.password1"
+                                                  type="password"
+                                                  ng-minlength="6"
+                                                  ng-maxlength="30"
+                                                  name="password1"
+                                                  required="">
+
+                                           <div ng-messages="signUpForm.password1.$error" class="text-left"
+                                                ng-show="signUpForm.password1.$dirty || dialog.regbtn">
+                                               <div ng-message="required">Password is required.</div>
+                                               <div ng-message="minlength">Make sure that your password is between 6 to 30 characters.</div>
+                                               <div ng-message="maxlength">Make sure that your password is between 6 to 30 characters.</div>
+                                           </div>
+                                       </md-input-container>
+                                       <md-input-container class="block">
+                                           <label class="text-left">Confirm password</label>
+                                           <input ng-model="dialog.password2"
+                                                  type="password"
+                                                  name="password2"
+                                                  compare-to="dialog.password1"
+                                                  onpaste="return false"
+                                                  required="">
+
+                                           <div ng-messages="signUpForm.password2.$error" class="text-left"
+                                                ng-show="signUpForm.password2.$dirty ||dialog.regbtn">
+                                               <div ng-message="required">Password is required.</div>
+                                               <div ng-message="compareTo">Passwords do not match</div>
+                                           </div>
+                                       </md-input-container>
+                                       <md-button class="md-primary md-raised block">
+                                           Submit
+                                       </md-button>
+                                   </form>
+                               </md-content>
+                           </md-tab>
+                       </md-tabs>
+                   </md-content>
+               </div>
+           </md-card-content>
+       </md-card>
+   </div>
+</div>

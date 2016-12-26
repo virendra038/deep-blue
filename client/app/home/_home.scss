@@ -1,0 +1,19 @@
+.login-signup-card{
+  width: 450px;
+}
+
+.banner-image {
+  background-image: url(https://cdn.pixabay.com/photo/2015/10/02/15/00/diary-968592_960_720.jpg);
+  background-size: cover;
+  min-height: 100vh;
+  overflow: hidden;
+  background-position: top;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

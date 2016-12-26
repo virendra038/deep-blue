@@ -1,0 +1,1 @@
+var apiEndPointConfig = '/api/v1/';

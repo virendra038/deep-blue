@@ -22,7 +22,7 @@
         templateCache : {
             file : 'templates.js',
             options : {
-                module : 'qcn',
+                module : 'deep-blue',
                 standAlone : false,
                 root : 'app/'
             }

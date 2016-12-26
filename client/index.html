@@ -1,0 +1,114 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <base href="/">
+    <title></title>
+    <meta name="description"
+          content="Save your precious memories at deepblue.com"/>
+    <meta name="keywords"
+          content="Online,Diary,Notes,Notebook,Memories,Precious,Collections">
+    <meta name="viewport" content=", initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="language" content="EN-US">
+    <meta name="theme-color" content="#696969">
+    <link rel="canonical" href="http://www.deepblue.com">
+    <link rel="icon" href="favicon.ico">
+
+    <!-- build:css styles/live.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css styles/app.css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/base.css">
+    <link rel="stylesheet" href="components/ngGallery/ngGallery.css" />
+    <link rel="stylesheet" href="components/spinner/treasure-overlay-spinner.css" />
+
+
+    <!-- endbuild -->
+    <link href="http://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="config/html5shiv.js"></script>
+    <![endif]-->
+</head>
+<body ng-app="deep-blue">
+<!--[if lt IE 9]>
+<p class="browserupgrade">You are using an
+    <strong>outdated</strong> browser. Please
+    <a href="http://outdatedbrowser.com/en/">upgrade
+        your browser</a> to improve your experience.
+</p>
+<![endif]-->
+<div class="container-fluid index" id="top">
+    <navbar-directive class="ng-cloak"></navbar-directive>
+    <main class="ng-cloak">
+        <div ui-view="">
+        </div>
+    </main>
+    <footer-directive class="ng-cloak"></footer-directive>
+</div>
+<!-- Load Jquery and Angular -->
+<script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+<!--<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>-->
+
+
+<!-- Opbeat for angular -->
+<script src="config/endpoint.js"></script>
+<!--<script src="config/opbeat-angular.js"></script>-->
+
+
+<!-- jquery and gridder -->
+<!-- build:js js/lib.js -->
+
+<!--vendor components-->
+<!-- bower:js-->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/moment/moment.js"></script>
+<script src="bower_components/angular-moment/angular-moment.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/lodash/lodash.js"></script>
+<script src="bower_components/angular-messages/angular-messages.js"></script>
+<script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+<script src="bower_components/angular-scroll/angular-scroll.js"></script>
+<script src="bower_components/ngMeta/dist/ngMeta.js"></script>
+<script src="bower_components/angular-socialshare/dist/angular-socialshare.min.js"></script>
+<script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
+<script src="bower_components/angular-lazy-img/release/angular-lazy-img.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-aria/angular-aria.js"></script>
+<script src="bower_components/angular-material/angular-material.js"></script>
+<!-- endbower-->
+<script src="components/ngGallery/ngGallery.js"></script>
+<script src="components/spinner/treasure-overlay-spinner.js"></script>
+
+<!-- endbuild -->
+<!--End vendor components-->
+<!-- build:js js/app.js -->
+<!--script-->
+<!-- inject:js -->
+<script src="/app/app.js"></script>
+<script src="/app/home/home.js"></script>
+<script src="/app/home/homeCtrl.js"></script>
+<script src="/app/footer/footer-directive.js"></script>
+<script src="/app/navbar/navbar-directive.js"></script>
+<script src="/app/directive/compareTo.js"></script>
+<script src="/app/service/authenticationService.js"></script>
+<!-- endinject -->
+<!--end script-->
+
+<!-- inject:template:js -->
+<!-- endinject -->
+
+<!-- endbuild -->
+<!-- Google Analytics -->
+
+
+</body>
+</html>
