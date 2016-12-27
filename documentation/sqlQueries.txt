@@ -1,0 +1,12 @@
+CREATE TABLE users(
+   id varchar(255) NOT NULL,
+   firstName varchar(255),
+   lastName varchar(255),
+   email varchar(255) NOT NULL,
+   diaryContent text,
+   tempToken varchar(255) DEFAULT NULL,
+   socialToken varchar(255) DEFAULT NULL,
+   created_at DATE DEFAULT NOW(),
+   updated_at DATE DEFAULT NOW(),
+   PRIMARY KEY ( id )
+);
