@@ -21,15 +21,15 @@ module.exports = {
 
     //Database parameters
 
-    dbhost: '139.59.5.184',
+    dbhost: 'localhost',
 
-    schema: 'deep-blue-dev',
+    schema: 'deepblue',
 
-    username: 'deep-blue',
+    username: 'deepblueuser',
 
-    password: 'testing',
+    password: 'deepblue',
 
-    secret: 'ofthechambers',
+    secret: 'deepblue',
 
     facebookClientID : '1673168503008112',
 
