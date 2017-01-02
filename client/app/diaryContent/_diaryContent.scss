@@ -1,0 +1,20 @@
+#diaryContent{
+  md-card{
+    min-height: 87vh;
+    min-width: 600px;
+    margin-top: 10vh;
+    padding: 5%;
+  }
+  .recent-entries{
+    ul{
+      line-height: 40px;
+    }
+  }
+
+  .save-delete-entry{
+    position: absolute;
+    bottom: 25px;
+    text-align: right;
+    right: 25px;
+  }
+}

@@ -1,0 +1,19 @@
+#footer{
+  background: black;
+  text-align: center;
+  padding: 10px;
+  line-height: 30px;
+  ul{
+    li{
+      cursor: pointer;
+      span{
+        text-align: left;
+        display: inline-block;
+        width: 150px;
+        a{
+          color: yellow;
+        }
+      }
+    }
+  }
+}

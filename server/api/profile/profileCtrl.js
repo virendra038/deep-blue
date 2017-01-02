@@ -18,6 +18,105 @@
 
     };
 
+    module.exports.content = function (req, res, next) {
+
+        var requestBody = req.body;
+        var email = '';
+        try {
+            if(req.userId == '' || req.userId == undefined || req.userId == 'undefined' || req.userId == null)
+            {
+                throw {
+                    status:400,
+                    code:'bad.request',
+                    message:"userId missing"
+                };
+            }
+
+            var user_id = req.userId;
+            var entry = req.body.entry;
+            var created_at = moment().format('LLL');
+            var updated_at = moment().format('LLL');
+            var sqlQuery = "INSERT INTO entries(user_id,entry,created_at,updated_at) " +
+                "VALUES(:user_id,:entry,:created_at,:updated_at)";
+
+            seq.sequelize.query(sqlQuery,{
+                replacements: {user_id:user_id,entry:entry,created_at:created_at,updated_at:updated_at},
+                type: seq.sequelize.QueryTypes.INSERT
+            })
+                .then(function (result) {
+                    res.sendStatus(201);
+                })
+                .catch(function (err) {
+                    res.status(422).json({
+                        error: {
+                            msg:err.message,
+                            code: "unexpected.error",
+                            message: "please contact the administrator"
+                        }
+                    });
+
+                })
+
+        } catch (err) {
+            res.status(422).json({
+                error: {
+                    code: "generic.exception",
+                    message: err.message
+                }
+            });
+        }
+
+    };
+
+    module.exports.getContent = function (req, res, next) {
+
+        var requestBody = req.body;
+        var email = '';
+        try {
+            if(req.userId == '' || req.userId == undefined || req.userId == 'undefined' || req.userId == null)
+            {
+                throw {
+                    status:400,
+                    code:'bad.request',
+                    message:"userId missing"
+                };
+            }
+
+            var user_id = req.userId;
+            var entry = req.body.entry;
+            var created_at = moment().format('LLL');
+            var updated_at = moment().format('LLL');
+            var sqlQuery = "SELECT * FROM  entries WHERE user_id = :user_id";
+
+            seq.sequelize.query(sqlQuery,{
+                replacements: {user_id:user_id,entry:entry,created_at:created_at,updated_at:updated_at},
+                type: seq.sequelize.QueryTypes.INSERT
+            })
+                .then(function (result) {
+                    res.sendStatus(201);
+                })
+                .catch(function (err) {
+                    res.status(422).json({
+                        error: {
+                            msg:err.message,
+                            code: "unexpected.error",
+                            message: "please contact the administrator"
+                        }
+                    });
+
+                })
+
+        } catch (err) {
+            res.status(422).json({
+                error: {
+                    code: "generic.exception",
+                    message: err.message
+                }
+            });
+        }
+
+    };
+
     module.exports.signup = function (req, response, next) {
 
         try{

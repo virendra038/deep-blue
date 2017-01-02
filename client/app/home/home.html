@@ -7,32 +7,36 @@
                        <md-tabs md-dynamic-height md-border-bottom>
                            <md-tab label="login">
                                <md-content class="md-padding">
+                                   <div>
+                                       <md-button class="md-raised block">Connect with Google</md-button>
+                                       <md-button class="md-raised block">Connect with Facebbok</md-button>
+                                   </div>
                                    <form action="" name="loginForm">
                                        <md-input-container class="block">
                                                <label>Email address</label>
-                                               <input ng-model="dialog.userEmail"
-                                                      ng-click="dialog.loginUserError = false"
+                                               <input ng-model="home.userEmail"
+                                                      ng-click="home.loginUserError = false"
                                                       name="email"
                                                       type="email"
                                                       ng-pattern='/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/'
                                                       required>
 
-                                               <div ng-messages="loginForm.email.$error" ng-show="loginForm.email.$dirty || dialog.logbtn">
+                                               <div ng-messages="loginForm.email.$error" ng-show="loginForm.email.$dirty || home.logbtn">
                                                    <div ng-message="required">Email address is required.</div>
                                                    <div ng-message="pattern">Email address is not valid.</div>
-                                                   <div ng-show="dialog.loginUserError" class="customError2">{{dialog.loginError}}</div>
+                                                   <div ng-show="home.loginUserError" class="customError2">{{home.loginError}}</div>
                                                </div>
                                        </md-input-container>
                                        <md-input-container class="block">
                                            <label class="text-left">Password</label>
-                                           <input ng-model="dialog.password" type="password" name="password" required="">
+                                           <input ng-model="home.password" type="password" name="password" required="">
 
                                            <div ng-messages="loginForm.password.$error" class="text-left"
-                                                ng-show="loginForm.password.$dirty || dialog.logbtn">
+                                                ng-show="loginForm.password.$dirty || home.logbtn">
                                                <div ng-message="required">Password is required.</div>
                                            </div>
                                        </md-input-container>
-                                       <md-button class="md-primary md-raised block">
+                                       <md-button class="md-primary md-raised block" ng-click="home.login()">
                                            Submit
                                        </md-button>
                                    </form>
@@ -43,24 +47,24 @@
                                    <form action="" name="signUpForm">
                                        <md-input-container class="block">
                                            <label class="text-left">Email address</label>
-                                           <input ng-model="dialog.email"
-                                                  ng-click="dialog.signupUserError = false"
+                                           <input ng-model="home.email"
+                                                  ng-click="home.signupUserError = false"
                                                   type="email"
                                                   name="email"
                                                   ng-pattern='/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/'
                                                   required=""
-                                                  ng-blur="dialog.checkEmailExistance()">
+                                                  ng-blur="home.checkEmailExistance()">
 
                                            <div ng-messages="signUpForm.email.$error"
-                                                ng-show="signUpForm.email.$dirty || dialog.regbtn">
+                                                ng-show="signUpForm.email.$dirty || home.regbtn">
                                                <div ng-message="required">Email address is required.</div>
                                                <div ng-message="pattern">Email address is not valid.</div>
-                                               <div ng-show="dialog.signupUserError" class="customError2">{{dialog.signupError}}</div>
+                                               <div ng-show="home.signupUserError" class="customError2">{{home.signupError}}</div>
                                            </div>
                                        </md-input-container>
                                        <md-input-container class="block">
                                            <label class="text-left">Password</label>
-                                           <input ng-model="dialog.password1"
+                                           <input ng-model="home.password1"
                                                   type="password"
                                                   ng-minlength="6"
                                                   ng-maxlength="30"
@@ -68,7 +72,7 @@
                                                   required="">
 
                                            <div ng-messages="signUpForm.password1.$error" class="text-left"
-                                                ng-show="signUpForm.password1.$dirty || dialog.regbtn">
+                                                ng-show="signUpForm.password1.$dirty || home.regbtn">
                                                <div ng-message="required">Password is required.</div>
                                                <div ng-message="minlength">Make sure that your password is between 6 to 30 characters.</div>
                                                <div ng-message="maxlength">Make sure that your password is between 6 to 30 characters.</div>
@@ -76,20 +80,20 @@
                                        </md-input-container>
                                        <md-input-container class="block">
                                            <label class="text-left">Confirm password</label>
-                                           <input ng-model="dialog.password2"
+                                           <input ng-model="home.password2"
                                                   type="password"
                                                   name="password2"
-                                                  compare-to="dialog.password1"
+                                                  compare-to="home.password1"
                                                   onpaste="return false"
                                                   required="">
 
                                            <div ng-messages="signUpForm.password2.$error" class="text-left"
-                                                ng-show="signUpForm.password2.$dirty ||dialog.regbtn">
+                                                ng-show="signUpForm.password2.$dirty ||home.regbtn">
                                                <div ng-message="required">Password is required.</div>
                                                <div ng-message="compareTo">Passwords do not match</div>
                                            </div>
                                        </md-input-container>
-                                       <md-button class="md-primary md-raised block">
+                                       <md-button class="md-primary md-raised block" ng-click="home.signup()">
                                            Submit
                                        </md-button>
                                    </form>

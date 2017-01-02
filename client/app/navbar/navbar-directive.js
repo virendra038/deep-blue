@@ -11,10 +11,17 @@
 
             return {
                 restrict: 'EA',
-                controller: ['$scope',
-                    function ($scope) {
+                controller: ['$scope','userAuthenticationService','$state','$rootScope',
+                    function ($scope, userAuthenticationService, $state, $rootScope) {
 
                         var self = this;
+
+                        $scope.isLoggedIn = userAuthenticationService.isLoggedIn();
+
+                        $scope.logout = function(){
+                            $state.go('home');
+                            userAuthenticationService.logout();
+                        };
 
 
                     }],

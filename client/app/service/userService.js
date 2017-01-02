@@ -4,8 +4,8 @@
 'use strict';
 
 angular.module('deep-blue')
-    .factory('userAuthenticationService',[ '$http', '$q', 'deepBlueConstant','$cookieStore','$cookies','$rootScope',
-        function userAuthenticationService(  $http, $q, deepBlueConstant, $cookieStore, $cookies, $rootScope) {
+    .factory('userService',[ '$http', '$q', 'deepBlueConstant','$cookieStore',
+        function userActionService(  $http, $q, deepBlueConstant, $cookieStore) {
 
 
             var currentUser = {};
@@ -13,14 +13,13 @@ angular.module('deep-blue')
             return {
                 /* allow user to login */
 
-                login: function(data, callback) {
+                profile: function(data, callback) {
                     var cb = callback || angular.noop;
                     var deferred = $q.defer();
 
                     $http({
-                        method  : 'POST',
-                        url     : deepBlueConstant.baseUrl + 'login',
-                        data    : data
+                        method  : 'GET',
+                        url     : deepBlueConstant.baseUrl + 'profile'
                     }).
                     then(function(data) {
                         deferred.resolve(data);
@@ -33,20 +32,19 @@ angular.module('deep-blue')
                     return deferred.promise;
                 },
 
-                /* allow user to signup */
+                /* allow user to login */
 
-
-                signup: function(data, callback) {
+                entry: function(data, callback) {
                     var cb = callback || angular.noop;
                     var deferred = $q.defer();
 
                     $http({
                         method  : 'POST',
-                        url     : deepBlueConstant.baseUrl + 'signup',
+                        url     : deepBlueConstant.baseUrl + 'content',
                         data    : data
                     }).
-                    then(function(response) {
-                        deferred.resolve(response);
+                    then(function(data) {
+                        deferred.resolve(data);
                         return cb();
                     }).
                     catch(function(err) {
@@ -54,22 +52,6 @@ angular.module('deep-blue')
                         return cb(err);
                     }.bind(this));
                     return deferred.promise;
-                },
-
-                isLoggedIn: function () {
-                    if ($cookieStore.get('auth-token')) {
-                        return true;
-                    }
-
-                },
-
-                logout: function (logData) {
-
-                            $cookieStore.remove('auth-token');
-                            $cookies.remove('tokenSocial');
-                            currentUser = {};
-                            $rootScope.isLoggedIn = false;
-                            console.log('see ya !!')
                 }
             };
         }]);

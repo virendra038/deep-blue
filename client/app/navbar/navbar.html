@@ -1,10 +1,10 @@
 <div class="row  navbar padding-top-one text-right">
-            <span class="pull-left bold timeline" ui-sref="home">Introspectum</span>
-    <md-input-container style="margin-right: 10px;">
+            <h1 class="pull-left bold timeline" ui-sref="home">Introspectum</h1>
+    <md-input-container style="margin-right: 10px;" ng-show="isLoggedIn">
         <label>User</label>
         <md-select ng-model="nav.action">
             <md-option  ui-sref="profile" value="Profile">Profile</md-option>
-            <md-option  ui-sref="home">Logout</md-option>
+            <md-option  ng-click="logout()">Logout</md-option>
         </md-select>
     </md-input-container>
 </div>

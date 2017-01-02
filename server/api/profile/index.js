@@ -11,7 +11,9 @@
     router.post('/signup', controller.signup);
     router.post('/login', controller.login);
     router.post('/checkemail', controller.emailExist);
-    router.get('/profile', controller.getUser);
+    router.get('/profile',auth.isAuthenticated, controller.getUser);
+    router.get('/content',auth.isAuthenticated, controller.getContent);
+    router.post('/content',auth.isAuthenticated, controller.content);
     module.exports = router;
 
 

@@ -21,40 +21,37 @@
     deep_blue.constant("deepBlueConstant", {
         "baseUrl": apiEndPointConfig
     });
-    deep_blue.config(['$stateProvider','$urlRouterProvider','$locationProvider',
-        function ($stateProvider,$urlRouterProvider,$locationProvider) {
+    deep_blue.config(['$stateProvider','$urlRouterProvider','$locationProvider','$httpProvider',
+        function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
 
-            // $urlRouterProvider
-            //     .otherwise('/');
+             $urlRouterProvider.otherwise('/');
             $locationProvider.html5Mode(true);
-            // $httpProvider.interceptors.push('authInjector');
-            // $mdDateLocaleProvider.formatDate = function (date) {
-            //     return moment(date).format('DD/MM/YYYY');
-            // };
+             $httpProvider.interceptors.push('authInjector');
+
         }]);
-    // deep_blue.factory('authInjector', function ($rootScope, $q, $cookieStore, $location) {
-    //     var authInjector = {
-    //         request: function (config) {
-    //             config.headers = config.headers || {};
-    //             if ($cookieStore.get('auth-token')) {
-    //                 config.headers.Authorization = 'Bearer ' + $cookieStore.get('auth-token');
-    //             }
-    //
-    //             return config;
-    //         },
-    //         responseError: function (res) {
-    //             if (res.status === 401) {
-    //                 $location.path('/');
-    //                 $cookieStore.remove('auth-token');
-    //                 return $q.reject(res);
-    //             }
-    //             else {
-    //                 return $q.reject(res);
-    //             }
-    //         }
-    //     };
-    //     return authInjector;
-    // });
+    deep_blue.factory('authInjector', function ($rootScope, $q, $cookieStore, $location) {
+        var authInjector = {
+            request: function (config) {
+                config.headers = config.headers || {};
+                if ($cookieStore.get('auth-token')) {
+                    config.headers.Authorization = 'Bearer ' + $cookieStore.get('auth-token');
+                }
+
+                return config;
+            },
+            responseError: function (res) {
+                if (res.status === 401) {
+                    $location.path('/');
+                    $cookieStore.remove('auth-token');
+                    return $q.reject(res);
+                }
+                else {
+                    return $q.reject(res);
+                }
+            }
+        };
+        return authInjector;
+    });
 
     deep_blue.run(['$rootScope',
         function ($rootScope) {
@@ -64,6 +61,8 @@
             });
 
             $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
+
+                window.document.title = toState.title + " | " + "Introspectum";
 
             });
 

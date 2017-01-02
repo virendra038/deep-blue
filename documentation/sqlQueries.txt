@@ -3,10 +3,18 @@ CREATE TABLE users(
    firstName varchar(255),
    lastName varchar(255),
    email varchar(255) NOT NULL,
-   diaryContent text,
    tempToken varchar(255) DEFAULT NULL,
    socialToken varchar(255) DEFAULT NULL,
    created_at DATE DEFAULT NOW(),
    updated_at DATE DEFAULT NOW(),
    PRIMARY KEY ( id )
+);
+
+CREATE TABLE entries (
+ id  BIGSERIAL NOT NULL,
+ user_id VARCHAR(30) NOT NULL,
+ entry text NOT NULL,
+ created_at DATE DEFAULT NOW(),
+ updated_at DATE DEFAULT NOW(),
+ FOREIGN KEY (user_id) REFERENCES users (id)
 );

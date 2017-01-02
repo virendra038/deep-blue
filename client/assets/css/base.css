@@ -779,6 +779,21 @@ a, a:hover, a:active, a:visited {
 #profile {
   width: 430px; }
 
+#diaryContent md-card {
+  min-height: 87vh;
+  min-width: 600px;
+  margin-top: 10vh;
+  padding: 5%; }
+
+#diaryContent .recent-entries ul {
+  line-height: 40px; }
+
+#diaryContent .save-delete-entry {
+  position: absolute;
+  bottom: 25px;
+  text-align: right;
+  right: 25px; }
+
 .login-signup-card {
   width: 450px; }
 
@@ -805,3 +820,21 @@ a, a:hover, a:active, a:visited {
 .navbar-button {
   background-color: #b22971 !important;
   color: #eeee !important; }
+
+.timeline {
+  padding: 10px;
+  cursor: pointer; }
+
+#footer {
+  background: black;
+  text-align: center;
+  padding: 10px;
+  line-height: 30px; }
+  #footer ul li {
+    cursor: pointer; }
+    #footer ul li span {
+      text-align: left;
+      display: inline-block;
+      width: 150px; }
+      #footer ul li span a {
+        color: yellow; }

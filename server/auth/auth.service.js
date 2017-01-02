@@ -15,7 +15,6 @@ module.exports.isAuthenticated = function(req, res, next) {
   async.waterfall([
     function(callback){
       var auth =  req.headers.authorization;
-      //console.log(auth);
       if(auth == null){
         return res.status(401).send('Unauthorized'); //res.redirect("http://localhost:7000");
       } else {
