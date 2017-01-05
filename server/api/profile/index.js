@@ -13,6 +13,7 @@
     router.post('/checkemail', controller.emailExist);
     router.get('/profile',auth.isAuthenticated, controller.getUser);
     router.get('/content',auth.isAuthenticated, controller.getContent);
+    router.get('/content/:date',auth.isAuthenticated, controller.getEntryContent);
     router.post('/content',auth.isAuthenticated, controller.content);
     module.exports = router;
 

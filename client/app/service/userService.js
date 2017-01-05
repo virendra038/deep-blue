@@ -52,6 +52,45 @@ angular.module('deep-blue')
                         return cb(err);
                     }.bind(this));
                     return deferred.promise;
+                },
+                /* allow user to login */
+
+                getEntries: function( callback) {
+                    var cb = callback || angular.noop;
+                    var deferred = $q.defer();
+
+                    $http({
+                        method  : 'GET',
+                        url     : deepBlueConstant.baseUrl + 'content',
+                    }).
+                    then(function(data) {
+                        deferred.resolve(data);
+                        return cb();
+                    }).
+                    catch(function(err) {
+                        deferred.reject(err);
+                        return cb(err);
+                    }.bind(this));
+                    return deferred.promise;
+                },
+                getEntry: function( data,callback) {
+                    // console.log(data);
+                    var cb = callback || angular.noop;
+                    var deferred = $q.defer();
+
+                    $http({
+                        method  : 'GET',
+                        url     : deepBlueConstant.baseUrl + 'content/'+data,
+                    }).
+                    then(function(data) {
+                        deferred.resolve(data);
+                        return cb();
+                    }).
+                    catch(function(err) {
+                        deferred.reject(err);
+                        return cb(err);
+                    }.bind(this));
+                    return deferred.promise;
                 }
             };
         }]);

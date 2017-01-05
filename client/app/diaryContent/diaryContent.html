@@ -12,27 +12,23 @@
             </md-button>
             <div class="recent-entries">
                 <ul>
-                    <li>December 25, 2016</li>
-                    <li>December 26, 2016</li>
-                    <li>December 27, 2016</li>
-                    <li>December 28, 2016</li>
-                    <li>December 29, 2016</li>
-                    <li>December 30, 2016</li>
-                    <li>December 31, 2016</li>
+                    <li ng-repeat="e in ctrl.entries">
+                        <span class="pointer"
+                              style="outline: none"
+                              ng-click="ctrl.getEntry(e.created_at,$event)">
+                            {{e.created_at | date : fullDate}}</span>
+                    </li>
                 </ul>
             </div>
         </md-content>
 
     </md-sidenav>
-
         <div layout="column" layout-align="top right" class="inline-block">
             <div>
                 <md-button ng-click="ctrl.toggleLeft()" class="md-raised" style="background: coral">
                     Recent Entries
                 </md-button>
-
             </div>
-
             <div class="center  inline-block">
                 <md-card>
                     <md-input-container>

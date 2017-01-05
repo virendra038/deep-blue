@@ -11,7 +11,7 @@ angular.module('deep-blue')
                 controllerAs: 'home',
                 isAuthenticated: false,
                 meta: {
-                    'description': 'Carve your precious memories @introspectum.com'
+                    'description': 'Carve your precious memories | Introspectum.com'
                 }
             })
     }]);
