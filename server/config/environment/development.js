@@ -17,7 +17,7 @@ module.exports = {
 
     //Application url
 
-    url: 'http://localhost:7000/',
+    url: 'http://localhost:7000/memory',
 
     //Database parameters
 
@@ -37,11 +37,11 @@ module.exports = {
 
     facebookCallbackURL:'http://localhost:9000/auth/facebook/callback',
 
-    googleClientID:'1081746878707-jgt8suetc9s46vct51ciq8sen87t921a.apps.googleusercontent.com',
+    googleClientID:'811729034169-s8nl1felcqeptev4chu4h8el3or0hijk.apps.googleusercontent.com',
 
-    googleClientSecret:'CjARjlCk3MFY7USkGHlQkvNS',
+    googleClientSecret:'IeDdotiPXK13Ch1xEfJIAkSY',
 
-    googleCallbackURL:'http://localhost:9000/auth/google/callback',
+    googleCallbackURL:'http://localhost:9000/auth/google/callback'
 
 
 };

@@ -1,17 +1,18 @@
 "use strict";
 
 angular.module('deep-blue')
-    .controller('diaryContentCtrl', ['$scope','$timeout', '$mdSidenav','userService','$filter','$mdDialog',
-        function ($scope, $timeout, $mdSidenav, userService, $filter, $mdDialog) {
+    .controller('diaryContentCtrl', ['$scope','$timeout', '$mdSidenav','userService','$filter','$mdDialog','$mdToast',
+        function ($scope, $timeout, $mdSidenav, userService, $filter, $mdDialog, $mdToast) {
 
             var self = this;
 
             self.toggleLeft = buildToggler('left');
             self.toggleRight = buildToggler('right');
             self.entry = '';
+            self.title = '';
             self.entries = {};
 
-            var getEntry = function(){
+             self.getEntries = function(){
                 userService.getEntries()
                     .then(function(response){
                      //   console.log(response.data);
@@ -21,7 +22,6 @@ angular.module('deep-blue')
                     })
             };
 
-            getEntry();
 
             function buildToggler(componentId) {
                 return function() {
@@ -33,11 +33,19 @@ angular.module('deep-blue')
 
             self.addEntry = function(){
                 var data = {
+                    title:self.title,
                   entry:self.entry
                 };
                 userService.entry(data)
                     .then(function(response){
-                        console.log(response);
+                    //    console.log(response);
+
+                        $mdToast.show(
+                            $mdToast.simple()
+                                .textContent('Entry added successfully!')
+                                .position('top right')
+                                .hideDelay(3000)
+                        );
                     },function(err){
                         console.log(err);
                     })
@@ -62,6 +70,24 @@ angular.module('deep-blue')
 
             };
 
+            self.deleteEntry = function(){
+                var date = moment().format();
+                var entryDate = $filter('date')(date,'yyyy-MM-dd');
+//                console.log(entryDate);
+
+                userService.deleteEntry(entryDate)
+                    .then(function(res){
+                        console.log(res);
+                        $mdToast.show(
+                            $mdToast.simple()
+                                .textContent('Entry deleted successfully!')
+                                .position('top right')
+                                .hideDelay(3000)
+                        );
+                    },function(err){
+                        console.log(err);
+                    })
+            }
 
 
         }]);

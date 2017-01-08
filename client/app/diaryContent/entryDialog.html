@@ -2,7 +2,7 @@
     <form ng-cloak>
         <md-toolbar>
             <div class="md-toolbar-tools">
-                <h2>Title</h2>
+                <h2>{{ctrl.entryTitle}}</h2>
                 <span flex></span>
                 <md-button class="md-icon-button" ng-click="ctrl.cancel()">
                     <md-icon md-svg-src="assets/svg/clear.svg" aria-label="Close dialog"></md-icon>
@@ -23,7 +23,7 @@
             <md-button  md-autofocus>
                 Edit
             </md-button>
-            <md-button>
+            <md-button ng-click="ctrl.deleteEntry()">
                 Delete
             </md-button>
         </md-dialog-actions>

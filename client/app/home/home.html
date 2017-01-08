@@ -8,10 +8,11 @@
                            <md-tab label="login">
                                <md-content class="md-padding">
                                    <div>
-                                       <md-button class=" block btn-google">Connect with Google</md-button>
+                                       <md-button class=" block btn-google"
+                                                  ng-click="home.google()">Connect with Google</md-button>
                                        <md-button class=" block btn-facebook">Connect with Facebbok</md-button>
                                    </div>
-                                   <form action="" name="loginForm">
+                                   <form action="submit" name="loginForm">
                                        <md-input-container class="block">
                                                <label>Email address</label>
                                                <input ng-model="home.userEmail"

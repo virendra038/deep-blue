@@ -53,8 +53,26 @@
         return authInjector;
     });
 
-    deep_blue.run(['$rootScope',
-        function ($rootScope) {
+    deep_blue.run(['$rootScope','$cookies','$cookieStore','$mdToast',
+        function ($rootScope, $cookies, $cookieStore, $mdToast) {
+
+            if ($cookies.get('tokenSocial')) {
+                //  console.log($cookies.get('tokenGoogle'));
+                // console.log($cookieStore.get('auth-token'));
+
+                if ($cookieStore.get('auth-token') == undefined) {
+                    $mdToast.show(
+                        $mdToast.simple()
+                            .textContent('You have been successfully logged in!')
+                            .position('top right')
+                            .hideDelay(300)
+                    );
+                    var tokenSocial = $cookies.get('tokenSocial');
+                    $cookieStore.put('auth-token', tokenSocial);
+
+                }
+                $rootScope.isLoggedIn =  true;
+            }
 
             $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
 
@@ -62,7 +80,7 @@
 
             $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
 
-                window.document.title = toState.title + " | " + "Introspectum";
+                window.document.title = toState.title + " @Introspectum";
 
             });
 

@@ -25,7 +25,7 @@
     </md-sidenav>
         <div layout="column" layout-align="top right" class="inline-block">
             <div>
-                <md-button ng-click="ctrl.toggleLeft()" class="md-raised" style="background: coral">
+                <md-button ng-click="ctrl.toggleLeft();ctrl.getEntries()" class="md-raised" style="background: coral">
                     Recent Entries
                 </md-button>
             </div>
@@ -33,7 +33,9 @@
                 <md-card>
                     <md-input-container>
                         <label>Title</label>
-                        <input type="text" autofocus>
+                        <input type="text"
+                               ng-model="ctrl.title"
+                               autofocus required>
                     </md-input-container>
                     <h3 class="text-left">
                         {{ctrl.date}}
@@ -44,11 +46,13 @@
                             <textarea type="text"
                                       class="width100"
                                       ng-model="ctrl.entry"
-                                      placeholder="Enter your text here"></textarea>
+                                      placeholder="Enter your text here"
+                            required></textarea>
                         </md-input-container>
                     </form>
                     <div class="save-delete-entry">
-                        <md-button class="md-raised right">Delete</md-button>
+                        <md-button class="md-raised right"
+                                   ng-click="ctrl.deleteEntry()">Delete</md-button>
                         <md-button class="md-primary md-raised right"
                                    ng-click="ctrl.addEntry()">
                             Save

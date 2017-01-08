@@ -1,6 +1,6 @@
 angular.module('deep-blue')
-    .controller('HomeCtrl', ['$scope','userAuthenticationService','$state','$cookieStore','$rootScope',
-        function ($scope, userAuthenticationService, $state, $cookieStore, $rootScope) {
+    .controller('HomeCtrl', ['$scope','userAuthenticationService','$state','$cookieStore','$rootScope','$window',
+        function ($scope, userAuthenticationService, $state, $cookieStore, $rootScope, $window) {
 
             var self = this;
 
@@ -36,7 +36,12 @@ angular.module('deep-blue')
                     },function(err){
                         console.log(err);
                     })
-            }
+            };
+
+            self.google = function(){
+                console.log('google');
+                    $window.location.href = 'auth/google';
+            };
 
 
 

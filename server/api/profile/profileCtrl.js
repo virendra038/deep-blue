@@ -34,13 +34,14 @@
 
             var user_id = req.userId;
             var entry = req.body.entry;
+            var title = req.body.title;
             var created_at = moment().format('LLL');
             var updated_at = moment().format('LLL');
-            var sqlQuery = "INSERT INTO entries(user_id,entry,created_at,updated_at) " +
-                "VALUES(:user_id,:entry,:created_at,:updated_at)";
+            var sqlQuery = "INSERT INTO entries(user_id, entry, title, created_at, updated_at) " +
+                "VALUES(:user_id, :entry, :title, :created_at, :updated_at)";
 
             seq.sequelize.query(sqlQuery,{
-                replacements: {user_id:user_id,entry:entry,created_at:created_at,updated_at:updated_at},
+                replacements: {user_id:user_id,entry:entry,title:title,created_at:created_at,updated_at:updated_at},
                 type: seq.sequelize.QueryTypes.INSERT
             })
                 .then(function (result) {
@@ -86,7 +87,7 @@
             var entry = req.body.entry;
             var created_at = moment().format('LLL');
             var updated_at = moment().format('LLL');
-            var sqlQuery = "SELECT created_at FROM  entries WHERE user_id = :user_id";
+            var sqlQuery = "SELECT created_at FROM  entries WHERE user_id = :user_id order by created_at DESC LIMIT 10";
 
             seq.sequelize.query(sqlQuery,{
                 replacements: {user_id:user_id},
@@ -123,7 +124,7 @@
     module.exports.getEntryContent = function (req, res, next) {
 
 
-        console.log(req.params);
+      //  console.log(req.params);
         try {
             if(req.userId == '' || req.userId == undefined || req.userId == 'undefined' || req.userId == null)
             {
@@ -136,7 +137,7 @@
 
             var user_id = req.userId;
             var created_at = req.params.date;
-            var sqlQuery = "SELECT entry FROM  entries WHERE user_id = :user_id AND created_at = :created_at";
+            var sqlQuery = "SELECT title, entry FROM  entries WHERE user_id = :user_id AND created_at = :created_at";
 
             seq.sequelize.query(sqlQuery,{
                 replacements: {user_id:user_id,created_at:created_at},
@@ -169,7 +170,49 @@
 
     };
 
+    module.exports.deleteEntry = function(req, res, next){
+        try {
+            if(req.userId == '' || req.userId == undefined || req.userId == 'undefined' || req.userId == null)
+            {
+                throw {
+                    status:400,
+                    code:'bad.request',
+                    message:"userId missing"
+                };
+            }
 
+            var user_id = req.userId;
+            var created_at = req.params.date;
+            var sqlQuery = "DELETE FROM  entries WHERE user_id = :user_id AND created_at = :created_at";
+
+            seq.sequelize.query(sqlQuery,{
+                replacements: {user_id:user_id,created_at:created_at},
+                type: seq.sequelize.QueryTypes.SELECT
+            })
+                .then(function (result) {
+                    res.sendStatus(204);
+                })
+                .catch(function (err) {
+                    res.status(422).json({
+                        error: {
+                            msg:err.message,
+                            code: "unexpected.error",
+                            message: "please contact the administrator"
+                        }
+                    });
+
+                })
+
+        } catch (err) {
+            res.status(422).json({
+                error: {
+                    code: "generic.exception",
+                    message: err.message
+                }
+            });
+        }
+
+    };
 
     module.exports.signup = function (req, response, next) {
 
