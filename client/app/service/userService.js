@@ -11,7 +11,7 @@ angular.module('deep-blue')
             var currentUser = {};
 
             return {
-                /* allow user to login */
+                /* allow user to fetch profile info*/
 
                 profile: function(data, callback) {
                     var cb = callback || angular.noop;
@@ -20,6 +20,28 @@ angular.module('deep-blue')
                     $http({
                         method  : 'GET',
                         url     : deepBlueConstant.baseUrl + 'profile'
+                    }).
+                    then(function(data) {
+                        deferred.resolve(data);
+                        return cb();
+                    }).
+                    catch(function(err) {
+                        deferred.reject(err);
+                        return cb(err);
+                    }.bind(this));
+                    return deferred.promise;
+                },
+
+                /* allow user to update profile info*/
+
+                updateProfile: function(data, callback) {
+                    var cb = callback || angular.noop;
+                    var deferred = $q.defer();
+
+                    $http({
+                        method  : 'POST',
+                        url     : deepBlueConstant.baseUrl + 'profile',
+                        data    : data
                     }).
                     then(function(data) {
                         deferred.resolve(data);
@@ -54,7 +76,7 @@ angular.module('deep-blue')
                     return deferred.promise;
                 },
 
-                /* allow user to add entry */
+                /* allow user to update entry */
 
                 updateEntry: function(date, data, callback) {
                     var cb = callback || angular.noop;

@@ -43,11 +43,12 @@ angular.module('deep-blue')
 
              userService.getEntry(entryDate)
                  .then(function(response){
-                //     console.log(response);
+                   //  console.log(response);
                      if(response.data.entries.length > 0)
                      {
                          self.entry = response.data.entries[0].entry;
                          self.title = response.data.entries[0].title;
+                         self.tags = response.data.entries[0].tags;
                          todayEntryExist = true;
                      }
                      //console.log(self.entryText);
@@ -64,7 +65,8 @@ angular.module('deep-blue')
             self.addEntry = function(){
                 var data = {
                     title:self.title,
-                  entry:self.entry
+                     entry:self.entry,
+                    tags:self.tags
                 };
 
                 if(todayEntryExist){
@@ -74,7 +76,14 @@ angular.module('deep-blue')
 
                     userService.updateEntry(date,data)
                         .then(function(response){
-                            console.log(response);
+                           // console.log(response);
+
+                            $mdToast.show(
+                                $mdToast.simple()
+                                    .textContent('Entry updated successfully!')
+                                    .position('top right')
+                                    .hideDelay(3000)
+                            );
                         },function(err){
                             console.log(err);
                         })
@@ -83,7 +92,7 @@ angular.module('deep-blue')
                     userService.entry(data)
                         .then(function(response){
                             //    console.log(response);
-
+                            todayEntryExist = true;
                             $mdToast.show(
                                 $mdToast.simple()
                                     .textContent('Entry added successfully!')

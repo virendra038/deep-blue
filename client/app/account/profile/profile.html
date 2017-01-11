@@ -4,19 +4,19 @@
             <form action="" name="profileForm">
                 <md-input-container class="block">
                     <label>First name</label>
-                    <input type="text">
+                    <input type="text" ng-model="ctrl.firstname">
                 </md-input-container>
 
                 <md-input-container class="block">
                     <label>Last name</label>
-                    <input type="text">
+                    <input type="text" ng-model="ctrl.lastname">
                 </md-input-container>
                     <span>Email address</span>
                 <div>
                     <span>{{ctrl.userEmail}}</span>
                 </div>
 
-                <md-button class="md-raised md-primary">
+                <md-button class="md-raised md-primary btn-facebook" ng-click="ctrl.updateProfile()">
                     Submit
                 </md-button>
 

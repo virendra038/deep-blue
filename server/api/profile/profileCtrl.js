@@ -20,6 +20,7 @@
 
     module.exports.content = function (req, res, next) {
 
+        // console.log(req.body.tags);
         var requestBody = req.body;
         var email = '';
         try {
@@ -35,10 +36,16 @@
             var user_id = req.userId;
             var entry = req.body.entry;
             var title = req.body.title;
+            var tagArray = req.body.tags;
+            var tags = '"' + tagArray.join('","') + '"'
+
+            console.log(tags);
+
+
             var created_at = moment().format('LLL');
             var updated_at = moment().format('LLL');
-            var sqlQuery = "INSERT INTO entries(user_id, entry, title, created_at, updated_at) " +
-                "VALUES(:user_id, :entry, :title, :created_at, :updated_at)";
+            var sqlQuery = "INSERT INTO entries(user_id, entry, title,tags, created_at, updated_at) " +
+                "VALUES(:user_id, :entry, :title, '{"+tags+"}', :created_at, :updated_at)";
 
             seq.sequelize.query(sqlQuery,{
                 replacements: {user_id:user_id,entry:entry,title:title,created_at:created_at,updated_at:updated_at},
@@ -86,12 +93,15 @@
             var user_id = req.userId;
             var entry = req.body.entry;
             var title = req.body.title;
+            var tagArray = req.body.tags;
+            var tags = '"' + tagArray.join('","') + '"'
             var created_at = req.params.date;
             var updated_at = moment().format('LLL');
-            var sqlQuery = "UPDATE entries SET title = :title, entry = :entry, updated_at = :updated_at WHERE user_id = :user_id AND created_at = :created_at" ;
+            var sqlQuery = "UPDATE entries SET title = :title, entry = :entry, tags='{"+tags+"}', updated_at = :updated_at " +
+                "WHERE user_id = :user_id AND created_at = :created_at" ;
 
             seq.sequelize.query(sqlQuery,{
-                replacements: {user_id:user_id,entry:entry,title:title,created_at:created_at,updated_at:updated_at},
+                replacements: {user_id:user_id,entry:entry,title:title,updated_at:updated_at,created_at:created_at},
                 type: seq.sequelize.QueryTypes.UPDATE
             })
                 .then(function (result) {
@@ -174,7 +184,7 @@
     module.exports.getEntryContent = function (req, res, next) {
 
 
-      //  console.log(req.params);
+        //  console.log(req.params);
         try {
             if(req.userId == '' || req.userId == undefined || req.userId == 'undefined' || req.userId == null)
             {
@@ -187,7 +197,7 @@
 
             var user_id = req.userId;
             var created_at = req.params.date;
-            var sqlQuery = "SELECT title, entry FROM  entries WHERE user_id = :user_id AND created_at = :created_at";
+            var sqlQuery = "SELECT title, entry, tags FROM  entries WHERE user_id = :user_id AND created_at = :created_at";
 
             seq.sequelize.query(sqlQuery,{
                 replacements: {user_id:user_id,created_at:created_at},
@@ -572,18 +582,18 @@
                     email: email
                 }
             })
-            .then(function (result) {
-                if (result) {
-                    res.sendStatus(200);
-                } else {
-                    res.status(422).json({
-                        error: {
-                            code: "user.does.not.exist",
-                            message: "User does not exist"
-                        }
-                    });
-                }
-            }).catch(function (err) {
+                .then(function (result) {
+                    if (result) {
+                        res.sendStatus(200);
+                    } else {
+                        res.status(422).json({
+                            error: {
+                                code: "user.does.not.exist",
+                                message: "User does not exist"
+                            }
+                        });
+                    }
+                }).catch(function (err) {
                 res.status(422).json({
                     error: {
                         code: "generic.exception",
@@ -633,6 +643,73 @@
                                 email: user.get('email')
                             }
                         });
+
+                    } else {
+                        res.status(404).json({
+                            error: {
+                                code: "unrecognized",
+                                message: "unrecognized"
+                            }
+                        });
+                    }
+                    return null;
+                })
+                .catch(function(err){
+
+                    res.status(422).json({
+                        error: {
+                            code: "unexpected.error",
+                            message: "please contact the administrator"
+                        }
+                    });
+                })
+
+        } catch (err){
+            res.status(err.status).json({
+                error: {
+                    code: err.code,
+                    message: err.message
+                }
+            });
+        }
+
+    };
+
+    module.exports.updateUser = function (req, res, next) {
+
+        var requestBody = req.body;
+
+        try{
+
+            if(req.userId == '' || req.userId == undefined || req.userId == 'undefined' || req.userId == null)
+            {
+                throw {
+                    status:400,
+                    code:'bad.request',
+                    message:"userId missing"
+                };
+            }
+
+
+            userModel.findOne({
+
+                where: {
+                    id: req.userId
+                }
+            })
+                .then(function (user) {
+                    if (user != null) {
+
+                        if(requestBody.firstname != user.get('firstname')) {
+                            user.set('firstname',requestBody.firstname);
+                        }
+                        if(requestBody.lastname != user.get('lastname')) {
+                            user.set('lastname',requestBody.lastname);
+                        }
+                        user.save();
+                        res.sendStatus(200);
+
+                        return null;
 
                     } else {
                         res.status(404).json({

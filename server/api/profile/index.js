@@ -12,6 +12,7 @@
     router.post('/login', controller.login);
     router.post('/checkemail', controller.emailExist);
     router.get('/profile',auth.isAuthenticated, controller.getUser);
+    router.post('/profile',auth.isAuthenticated, controller.updateUser);
     router.get('/content',auth.isAuthenticated, controller.getContent);
     router.get('/content/:date',auth.isAuthenticated, controller.getEntryContent);
     router.get('/content/delete/:date',auth.isAuthenticated, controller.deleteEntry);
