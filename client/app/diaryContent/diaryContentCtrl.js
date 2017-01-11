@@ -1,8 +1,8 @@
 "use strict";
 
 angular.module('deep-blue')
-    .controller('diaryContentCtrl', ['$scope','$timeout', '$mdSidenav','userService','$filter','$mdDialog','$mdToast',
-        function ($scope, $timeout, $mdSidenav, userService, $filter, $mdDialog, $mdToast) {
+    .controller('diaryContentCtrl', ['$scope','$timeout', '$mdSidenav','userService','$filter','$mdDialog','$mdToast','$state',
+        function ($scope, $timeout, $mdSidenav, userService, $filter, $mdDialog, $mdToast, $state) {
 
             var self = this;
 
@@ -123,7 +123,8 @@ angular.module('deep-blue')
 
                 userService.deleteEntry(entryDate)
                     .then(function(res){
-                        console.log(res);
+                      //  console.log(res);
+                        $state.reload();
                         $mdToast.show(
                             $mdToast.simple()
                                 .textContent('Entry deleted successfully!')
