@@ -798,6 +798,11 @@ a, a:hover, a:active, a:visited {
   min-height: 450px;
   min-width: 545px; }
 
+.content-tags {
+  position: absolute;
+  bottom: 95px;
+  width: 90%; }
+
 .login-signup-card {
   width: 450px; }
 
@@ -817,11 +822,15 @@ a, a:hover, a:active, a:visited {
 
 .btn-facebook {
   background-color: #3B5998;
-  color: #fff; }
+  color: #fff;
+  width: 300px;
+  margin: 5px auto; }
 
 .btn-google {
   background-color: #dd4b39;
-  color: #fff; }
+  color: #fff;
+  width: 300px;
+  margin: 5px auto; }
 
 .navbar {
   position: relative;

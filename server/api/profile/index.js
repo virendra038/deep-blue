@@ -16,6 +16,7 @@
     router.get('/content/:date',auth.isAuthenticated, controller.getEntryContent);
     router.get('/content/delete/:date',auth.isAuthenticated, controller.deleteEntry);
     router.post('/content',auth.isAuthenticated, controller.content);
+    router.post('/content/update/:date',auth.isAuthenticated, controller.updateContent);
     module.exports = router;
 
 

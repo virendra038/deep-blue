@@ -11,6 +11,10 @@ angular.module('deep-blue')
             self.entry = '';
             self.title = '';
             self.entries = {};
+            self.tags = [];
+            self.readonly = false;
+
+            var todayEntryExist = false;
 
              self.getEntries = function(){
                 userService.getEntries()
@@ -30,25 +34,67 @@ angular.module('deep-blue')
             }
 
             self.date = moment().format('LL');
+		
+
+		 var getTodayEntry = function(){
+
+		     var today = new Date();
+                var entryDate = $filter('date')(today,'yyyy-MM-dd');
+
+             userService.getEntry(entryDate)
+                 .then(function(response){
+                //     console.log(response);
+                     if(response.data.entries.length > 0)
+                     {
+                         self.entry = response.data.entries[0].entry;
+                         self.title = response.data.entries[0].title;
+                         todayEntryExist = true;
+                     }
+                     //console.log(self.entryText);
+                 },function(err){
+                     console.log(err);
+                 });
+
+
+            };
+
+		 getTodayEntry();
+
 
             self.addEntry = function(){
                 var data = {
                     title:self.title,
                   entry:self.entry
                 };
-                userService.entry(data)
-                    .then(function(response){
-                    //    console.log(response);
 
-                        $mdToast.show(
-                            $mdToast.simple()
-                                .textContent('Entry added successfully!')
-                                .position('top right')
-                                .hideDelay(3000)
-                        );
-                    },function(err){
-                        console.log(err);
-                    })
+                if(todayEntryExist){
+
+                    var today = new Date();
+                    var date = $filter('date')(today,'yyyy-MM-dd');
+
+                    userService.updateEntry(date,data)
+                        .then(function(response){
+                            console.log(response);
+                        },function(err){
+                            console.log(err);
+                        })
+
+                } else {
+                    userService.entry(data)
+                        .then(function(response){
+                            //    console.log(response);
+
+                            $mdToast.show(
+                                $mdToast.simple()
+                                    .textContent('Entry added successfully!')
+                                    .position('top right')
+                                    .hideDelay(3000)
+                            );
+                        },function(err){
+                            console.log(err);
+                        })
+                }
+
             };
 
             self.getEntry = function(date,ev){

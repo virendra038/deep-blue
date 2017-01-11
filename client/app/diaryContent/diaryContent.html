@@ -23,45 +23,55 @@
         </md-content>
 
     </md-sidenav>
-        <div layout="column" layout-align="top right" class="inline-block">
-            <div>
-                <md-button ng-click="ctrl.toggleLeft();ctrl.getEntries()" class="md-raised" style="background: coral">
-                    Recent Entries
-                </md-button>
-            </div>
-            <div class="center  inline-block">
-                <md-card>
-                    <md-input-container>
-                        <label>Title</label>
-                        <input type="text"
-                               ng-model="ctrl.title"
-                               autofocus required>
-                    </md-input-container>
-                    <h3 class="text-left">
-                        {{ctrl.date}}
-                    </h3>
+    <div layout="column" layout-align="top right" class="inline-block">
+        <div>
+            <md-button ng-click="ctrl.toggleLeft();ctrl.getEntries()" class="md-raised" style="background: coral">
+                Recent Entries
+            </md-button>
+        </div>
+        <div class="center  inline-block">
+            <md-card>
+                <md-input-container>
+                    <label>Title</label>
+                    <input type="text"
+                           ng-model="ctrl.title"
+                           autofocus required>
+                </md-input-container>
+                <h3 class="text-left">
+                    {{ctrl.date}}
+                </h3>
 
-                    <form action="">
-                        <md-input-container class="width100">
+                <form action="">
+                    <md-input-container class="width100">
                             <textarea type="text"
                                       class="width100"
                                       ng-model="ctrl.entry"
                                       placeholder="Enter your text here"
-                            required></textarea>
-                        </md-input-container>
-                    </form>
-                    <div class="save-delete-entry">
-                        <md-button class="md-raised right"
-                                   ng-click="ctrl.deleteEntry()">Delete</md-button>
-                        <md-button class="md-primary md-raised right"
-                                   ng-click="ctrl.addEntry()">
-                            Save
-                        </md-button>
-                    </div>
-                </md-card>
-            </div>
+                                      required></textarea>
+                    </md-input-container>
+                </form>
+                <div class="content-tags">
+                    <md-chips
+                            ng-model="ctrl.tags"
+                            readonly="ctrl.readonly"
+                            placeholder="Enter a tag and press Enter key"
+                            delete-button-label="Remove Tag"
+                            delete-hint="Press delete to remove tag"
+                            secondary-placeholder="+Tag"></md-chips>
+                </div>
+                <div class="save-delete-entry">
 
+                    <md-button class="md-raised right"
+                               ng-click="ctrl.deleteEntry()">Delete</md-button>
+                    <md-button class="md-primary md-raised right"
+                               ng-click="ctrl.addEntry()">
+                        Save
+                    </md-button>
+                </div>
+            </md-card>
         </div>
+
+    </div>
 </div>
 
 

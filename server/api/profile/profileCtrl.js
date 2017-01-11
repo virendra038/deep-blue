@@ -69,6 +69,56 @@
 
     };
 
+    module.exports.updateContent = function (req, res, next) {
+
+        var requestBody = req.body;
+        var email = '';
+        try {
+            if(req.userId == '' || req.userId == undefined || req.userId == 'undefined' || req.userId == null)
+            {
+                throw {
+                    status:400,
+                    code:'bad.request',
+                    message:"userId missing"
+                };
+            }
+
+            var user_id = req.userId;
+            var entry = req.body.entry;
+            var title = req.body.title;
+            var created_at = req.params.date;
+            var updated_at = moment().format('LLL');
+            var sqlQuery = "UPDATE entries SET title = :title, entry = :entry, updated_at = :updated_at WHERE user_id = :user_id AND created_at = :created_at" ;
+
+            seq.sequelize.query(sqlQuery,{
+                replacements: {user_id:user_id,entry:entry,title:title,created_at:created_at,updated_at:updated_at},
+                type: seq.sequelize.QueryTypes.UPDATE
+            })
+                .then(function (result) {
+                    res.sendStatus(200);
+                })
+                .catch(function (err) {
+                    res.status(422).json({
+                        error: {
+                            msg:err.message,
+                            code: "unexpected.error",
+                            message: "please contact the administrator"
+                        }
+                    });
+
+                })
+
+        } catch (err) {
+            res.status(422).json({
+                error: {
+                    code: "generic.exception",
+                    message: err.message
+                }
+            });
+        }
+
+    };
+
     module.exports.getContent = function (req, res, next) {
 
         var requestBody = req.body;
