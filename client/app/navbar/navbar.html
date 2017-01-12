@@ -1,6 +1,11 @@
 <div class="row  navbar padding-top-one text-right">
             <h1 class="pull-left bold timeline" ui-sref="home">Introspectum</h1>
-    <md-input-container style="margin-right: 10px;" ng-show="isLoggedIn">
+    <form action="" ng-submit="search()" class="searchForm">
+        <md-input-container>
+            <input type="text" placeholder="Search By Tag" ng-model="tagKeyword">
+        </md-input-container>
+    </form>
+    <md-input-container style="margin-right: 10px;" ng-show="isLoggedIn" ng-cloak="">
         <label>User</label>
         <md-select ng-model="nav.action">
             <md-option  ui-sref="profile" value="Profile">Profile</md-option>

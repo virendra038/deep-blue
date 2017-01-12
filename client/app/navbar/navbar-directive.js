@@ -15,8 +15,13 @@
                     function ($scope, userAuthenticationService, $state, $rootScope) {
 
                         var self = this;
-
+                        $scope.tagKeyword = '';
                         $scope.isLoggedIn = userAuthenticationService.isLoggedIn();
+
+
+                        $scope.search = function(){
+                            console.log($scope.tagKeyword);
+                        };
 
                         $scope.logout = function(){
                             $state.go('home');

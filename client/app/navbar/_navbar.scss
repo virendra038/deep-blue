@@ -15,3 +15,15 @@
   padding: 10px;
   cursor: pointer;
 }
+
+.searchForm{
+  position: relative;
+  z-index: 1000;
+  width: 500px;
+  margin: -5px auto;
+  display: inline-block;
+  text-align: left;
+  md-input-container{
+    width: 50%;
+  }
+}

@@ -180,6 +180,54 @@
 
     };
 
+    module.exports.search = function (req, res, next) {
+
+        var requestBody = req.body;
+        try {
+            if(req.userId == '' || req.userId == undefined || req.userId == 'undefined' || req.userId == null)
+            {
+                throw {
+                    status:400,
+                    code:'bad.request',
+                    message:"userId missing"
+                };
+            }
+
+            var user_id = req.userId;
+            var tagKeyword = req.body.tagKeyword;
+            var sqlQuery = "SELECT * from entries  where user_id = :user_id AND :tagKeyword = ANY (tags), order by created_at DESC LIMIT 10";
+
+            seq.sequelize.query(sqlQuery,{
+                replacements: {user_id:user_id,tagKeyword:tagKeyword},
+                type: seq.sequelize.QueryTypes.SELECT
+            })
+                .then(function (result) {
+                    res.json({
+                        entries:result
+                    });
+                })
+                .catch(function (err) {
+                    res.status(422).json({
+                        error: {
+                            msg:err.message,
+                            code: "unexpected.error",
+                            message: "please contact the administrator"
+                        }
+                    });
+
+                })
+
+        } catch (err) {
+            res.status(422).json({
+                error: {
+                    code: "generic.exception",
+                    message: err.message
+                }
+            });
+        }
+
+    };
+
 
     module.exports.getEntryContent = function (req, res, next) {
 
