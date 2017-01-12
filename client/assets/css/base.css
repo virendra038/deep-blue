@@ -778,6 +778,17 @@ a, a:hover, a:active, a:visited {
 
 #profile {
   width: 430px; }
+  #profile md-input-container {
+    width: 300px;
+    margin: auto; }
+
+.create {
+  width: 64px;
+  height: 64px; }
+
+#createEntry {
+  text-align: right;
+  margin: 1em 2em; }
 
 #diaryContent md-card {
   min-height: 87vh;
@@ -805,9 +816,12 @@ a, a:hover, a:active, a:visited {
 
 .login-signup-card {
   width: 450px; }
+  .login-signup-card md-input-container {
+    width: 300px;
+    margin: auto; }
 
 .banner-image {
-  background-image: url(../images/diary.jpg);
+  background-image: url(../../assets/images/diary.jpg);
   background-size: cover;
   min-height: 100vh;
   overflow: hidden;
@@ -835,8 +849,9 @@ a, a:hover, a:active, a:visited {
 .navbar {
   position: relative;
   top: 0;
-  background: #ddd;
-  height: 80px; }
+  background: #eee;
+  height: 80px;
+  border-bottom: 1px solid pink; }
 
 .navbar-button {
   background-color: #b22971 !important;

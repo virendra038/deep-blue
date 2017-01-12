@@ -9,7 +9,7 @@ angular.module('deep-blue')
                 .then(function(response){
 
                     var profile = response.data.user;
-                    console.log(profile);
+                  //  console.log(profile);
                     if(profile.firstname != null){
                         self.firstname = profile.firstname;
                     }

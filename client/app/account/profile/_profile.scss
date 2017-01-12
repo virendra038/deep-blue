@@ -1,3 +1,16 @@
 #profile{
   width: 430px;
+  md-input-container{
+    width: 300px;
+    margin:auto;
+  }
+}
+
+.create{
+  width: 64px;
+  height: 64px;
+}
+#createEntry{
+  text-align: right;
+  margin: 1em 2em;
 }

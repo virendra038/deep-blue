@@ -31,9 +31,9 @@ module.exports = {
 
     secret: 'deepblue',
 
-    facebookClientID : '1673168503008112',
+    facebookClientID : '1753892821604803',
 
-    facebookClientSecret : '3b4e221771a2f4b24255860917afd04b',
+    facebookClientSecret : '17ec588367d10922dc8e3031d75aec5e',
 
     facebookCallbackURL:'http://localhost:9000/auth/facebook/callback',
 

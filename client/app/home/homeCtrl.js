@@ -39,8 +39,13 @@ angular.module('deep-blue')
             };
 
             self.google = function(){
-                console.log('google');
+               // console.log('google');
                     $window.location.href = 'auth/google';
+            };
+
+            self.facebook = function(){
+                // console.log('google');
+                $window.location.href = 'auth/facebook';
             };
 
 

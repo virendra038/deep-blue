@@ -10,14 +10,28 @@
             </div>
         </md-toolbar>
 
-        <md-dialog-content style=" min-height: 450px;min-width: 545px;">
-            <h3 class="text-left" style="padding: 2%">
+        <md-dialog-content style=" min-height: 450px;min-width: 545px;padding: 2%">
+            <h3 class="text-left">
                 {{ctrl.entryDate}}
             </h3>
-            <div class="md-dialog-content">
-                {{ctrl.entryText}}
+            <md-input-container class="width100">
+                            <textarea type="text"
+                                      class="width100"
+                                      ng-model="ctrl.entryText"
+                                      placeholder="Your Entry"
+                                      required></textarea>
+            </md-input-container>
+            <div class="content-tags">
+                <md-chips
+                        ng-model="ctrl.tags"
+                        readonly="ctrl.readonly"
+                        placeholder="Enter a tag, hit Enter"
+                        delete-button-label="Remove Tag"
+                        delete-hint="Press delete to remove tag"
+                        secondary-placeholder="+Tag"></md-chips>
             </div>
         </md-dialog-content>
+    </form>
 
         <md-dialog-actions layout="row">
             <md-button  md-autofocus>

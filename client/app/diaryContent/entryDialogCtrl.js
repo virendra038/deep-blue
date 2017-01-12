@@ -20,6 +20,7 @@ angular.module('deep-blue')
                     console.log(response.data.entries);
                     self.entryText = response.data.entries[0].entry;
                     self.entryTitle = response.data.entries[0].title;
+                    self.tags =  response.data.entries[0].tags;
                     //console.log(self.entryText);
                 },function(err){
                     console.log(err);
