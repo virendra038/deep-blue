@@ -76,6 +76,29 @@ angular.module('deep-blue')
                     return deferred.promise;
                 },
 
+
+                /* allow user to add entry */
+
+                search: function(data, callback) {
+                    var cb = callback || angular.noop;
+                    var deferred = $q.defer();
+
+                    $http({
+                        method  : 'POST',
+                        url     : deepBlueConstant.baseUrl + 'search',
+                        data    : data
+                    }).
+                    then(function(data) {
+                        deferred.resolve(data);
+                        return cb();
+                    }).
+                    catch(function(err) {
+                        deferred.reject(err);
+                        return cb(err);
+                    }.bind(this));
+                    return deferred.promise;
+                },
+
                 /* allow user to update entry */
 
                 updateEntry: function(date, data, callback) {

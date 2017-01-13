@@ -776,6 +776,32 @@ a, a:hover, a:active, a:visited {
   .margin-top-half-xs {
     margin-top: .5em !important; } }
 
+#allEntries {
+  background: #f4f4f6;
+  width: 100vw;
+  height: 100vh; }
+  #allEntries h2 {
+    padding: 5px;
+    margin: 10px; }
+
+.custom-card {
+  background: #fff;
+  width: 250px;
+  height: 260px;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #dcdce0;
+  border-width: 1px 0 0;
+  color: #313131;
+  display: inline-block;
+  cursor: pointer;
+  outline: none; }
+  .custom-card .content {
+    margin-top: 20px; }
+
+.custom-card:hover h3 {
+  color: #43aea8; }
+
 #profile {
   width: 430px; }
   #profile md-input-container {
@@ -783,8 +809,8 @@ a, a:hover, a:active, a:visited {
     margin: auto; }
 
 .create {
-  width: 64px;
-  height: 64px; }
+  width: 48px;
+  height: 48px; }
 
 #createEntry {
   text-align: right;
@@ -860,6 +886,16 @@ a, a:hover, a:active, a:visited {
 .timeline {
   padding: 10px;
   cursor: pointer; }
+
+.searchForm {
+  position: relative;
+  z-index: 1000;
+  width: 500px;
+  margin: -5px auto;
+  display: inline-block;
+  text-align: left; }
+  .searchForm md-input-container {
+    width: 50%; }
 
 #footer {
   background: black;

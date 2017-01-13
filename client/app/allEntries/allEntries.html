@@ -1,0 +1,17 @@
+<div class="container row" id="allEntries">
+    <div id="createEntry">
+
+        <md-icon md-svg-src="assets/svg/create.svg" class="create pointer" ui-sref="diaryContent">
+            <md-tooltip>
+                Start writing
+            </md-tooltip>
+        </md-icon>
+    </div>
+    <h2>{{ctrl.entries.length}} Search Results</h2>
+    <div class="custom-card" ng-repeat="e in ctrl.entries" ng-click="ctrl.detail(e.created_at,$event)">
+           <h3 class="text-left">{{e.title}}</h3>
+           <div class="content">
+               {{e.entry}}
+           </div>
+    </div>
+</div>

@@ -1,6 +1,6 @@
 <div class="row  navbar padding-top-one text-right">
             <h1 class="pull-left bold timeline" ui-sref="home">Introspectum</h1>
-    <form action="" ng-submit="search()" class="searchForm">
+    <form a ng-submit="search()" class="searchForm" ng-show="isLoggedIn" ng-cloak="">
         <md-input-container>
             <input type="text" placeholder="Search By Tag" ng-model="tagKeyword">
         </md-input-container>

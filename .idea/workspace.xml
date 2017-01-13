@@ -2,11 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8f232d1-abcd-432a-b337-844110f86b05" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/allEntries/_allEntries.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/allEntries/allEntries.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/allEntries/allEntriesCtrl.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/navbar/_navbar.scss" afterPath="$PROJECT_DIR$/client/app/navbar/_navbar.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/account/profile/_profile.scss" afterPath="$PROJECT_DIR$/client/app/account/profile/_profile.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/diaryContent/entryDialogCtrl.js" afterPath="$PROJECT_DIR$/client/app/diaryContent/entryDialogCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/home/home.js" afterPath="$PROJECT_DIR$/client/app/home/home.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/navbar/navbar-directive.js" afterPath="$PROJECT_DIR$/client/app/navbar/navbar-directive.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/navbar/navbar.html" afterPath="$PROJECT_DIR$/client/app/navbar/navbar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/api/profile/index.js" afterPath="$PROJECT_DIR$/server/api/profile/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/service/userService.js" afterPath="$PROJECT_DIR$/client/app/service/userService.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/css/base.css" afterPath="$PROJECT_DIR$/client/assets/css/base.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/scss/base.scss" afterPath="$PROJECT_DIR$/client/assets/scss/base.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/index.html" afterPath="$PROJECT_DIR$/client/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/api/profile/profileCtrl.js" afterPath="$PROJECT_DIR$/server/api/profile/profileCtrl.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -32,39 +40,49 @@
         <entry file="file://$PROJECT_DIR$/server/api/profile/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
-              <caret line="20" column="67" lean-forward="true" selection-start-line="20" selection-start-column="67" selection-end-line="20" selection-end-column="67" />
+              <caret line="20" column="63" lean-forward="false" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="63" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="navbar.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/app/navbar/navbar.html">
+      <file leaf-file-name="allEntries.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/app/allEntries/allEntries.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="58" lean-forward="false" selection-start-line="2" selection-start-column="58" selection-end-line="2" selection-end-column="58" />
+            <state relative-caret-position="45">
+              <caret line="3" column="61" lean-forward="false" selection-start-line="3" selection-start-column="61" selection-end-line="3" selection-end-column="61" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_profile.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/app/account/profile/_profile.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="15" lean-forward="false" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="allEntriesCtrl.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/app/allEntries/allEntriesCtrl.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="26" column="45" lean-forward="true" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
               <folding>
-                <element signature="n#style#0;n#md-input-container#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#0#39#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="navbar-directive.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/app/navbar/navbar-directive.js">
+      <file leaf-file-name="_allEntries.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/app/allEntries/_allEntries.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="59" lean-forward="false" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_navbar.scss" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client/app/navbar/_navbar.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+            <state relative-caret-position="315">
+              <caret line="21" column="16" lean-forward="false" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -73,50 +91,25 @@
       <file leaf-file-name="profile.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/account/profile/profile.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="69" lean-forward="false" selection-start-line="2" selection-start-column="69" selection-end-line="2" selection-end-column="69" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="diaryContent.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/app/diaryContent/diaryContent.js">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
-              <caret line="5" column="32" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="32" />
+              <caret line="5" column="21" lean-forward="true" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profileCtrl.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/api/profile/profileCtrl.js">
+      <file leaf-file-name="diaryContentCtrl.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/app/diaryContent/diaryContentCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="196" column="48" lean-forward="false" selection-start-line="196" selection-start-column="48" selection-end-line="196" selection-end-column="48" />
+            <state relative-caret-position="450">
+              <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
               <folding>
-                <element signature="e#658#2538#0" expanded="false" />
-                <element signature="e#2602#4407#0" expanded="false" />
-                <element signature="e#4468#6047#0" expanded="false" />
-                <element signature="e#7673#9155#0" expanded="false" />
-                <element signature="e#9215#10586#0" expanded="false" />
-                <element signature="e#10648#16705#0" expanded="false" />
-                <element signature="e#16762#21409#0" expanded="false" />
-                <element signature="e#21471#23005#0" expanded="false" />
-                <element signature="e#23063#24798#0" expanded="false" />
-                <element signature="e#24859#26740#0" expanded="false" />
+                <element signature="e#645#965#0" expanded="false" />
+                <element signature="e#1016#1139#0" expanded="false" />
+                <element signature="e#1225#1985#0" expanded="false" />
+                <element signature="e#2048#3640#0" expanded="false" />
+                <element signature="e#4276#5019#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="diaryContent.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/app/diaryContent/diaryContent.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="60" column="22" lean-forward="true" selection-start-line="44" selection-start-column="18" selection-end-line="60" selection-end-column="22" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -124,21 +117,9 @@
       <file leaf-file-name="entryDialogCtrl.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/diaryContent/entryDialogCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="63" lean-forward="false" selection-start-line="22" selection-start-column="63" selection-end-line="22" selection-end-column="63" />
+            <state relative-caret-position="285">
+              <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="entryDialog.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/app/diaryContent/entryDialog.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="83" lean-forward="false" selection-start-line="12" selection-start-column="83" selection-end-line="12" selection-end-column="83" />
-              <folding>
-                <element signature="n#style#0;n#md-dialog-content#0;n#form#0;n#md-dialog#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -149,6 +130,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -184,10 +166,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/server/config/strategies/facebook.js" />
-        <option value="$PROJECT_DIR$/server/config/strategies/google.js" />
-        <option value="$PROJECT_DIR$/client/config/endpoint.js" />
-        <option value="$PROJECT_DIR$/client/config/html5shiv.js" />
         <option value="$PROJECT_DIR$/client/app/footer/footer-directive.js" />
         <option value="$PROJECT_DIR$/server/config/passport.js" />
         <option value="$PROJECT_DIR$/server/api/google/index.js" />
@@ -195,12 +173,10 @@
         <option value="$PROJECT_DIR$/client/assets/scss/_main.scss" />
         <option value="$PROJECT_DIR$/client/bower.json" />
         <option value="$PROJECT_DIR$/client/app/directive/compareTo.js" />
-        <option value="$PROJECT_DIR$/client/gulpfile-config.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/server/config/dbconfig.js" />
         <option value="$PROJECT_DIR$/server/config/strategies/local.js" />
         <option value="$PROJECT_DIR$/server/models/userModel.js" />
-        <option value="$PROJECT_DIR$/client/assets/scss/base.scss" />
         <option value="$PROJECT_DIR$/server/auth/auth.service.js" />
         <option value="$PROJECT_DIR$/client/app/service/authenticationService.js" />
         <option value="$PROJECT_DIR$/client/app/account/account.js" />
@@ -209,16 +185,12 @@
         <option value="$PROJECT_DIR$/server/api/diaryContent/diaryContentCtrl.js" />
         <option value="$PROJECT_DIR$/server/api/diaryContent/index.js" />
         <option value="$PROJECT_DIR$/server/routes.js" />
-        <option value="$PROJECT_DIR$/client/app/home/home.js" />
-        <option value="$PROJECT_DIR$/client/index.html" />
         <option value="$PROJECT_DIR$/client/app/diaryContent/diaryContent.js" />
         <option value="$PROJECT_DIR$/client/app/app.js" />
         <option value="$PROJECT_DIR$/server/api/google/googleCtrl.js" />
         <option value="$PROJECT_DIR$/documentation/sqlQueries.txt" />
         <option value="$PROJECT_DIR$/client/app/diaryContent/_diaryContent.scss" />
-        <option value="$PROJECT_DIR$/client/app/diaryContent/diaryContent.html" />
         <option value="$PROJECT_DIR$/client/app/diaryContent/diaryContentCtrl.js" />
-        <option value="$PROJECT_DIR$/client/app/service/userService.js" />
         <option value="$PROJECT_DIR$/client/app/home/_home.scss" />
         <option value="$PROJECT_DIR$/server/config/environment/development.js" />
         <option value="$PROJECT_DIR$/client/app/home/home.html" />
@@ -226,15 +198,25 @@
         <option value="$PROJECT_DIR$/server/api/facebook/facebookCtrl.js" />
         <option value="$PROJECT_DIR$/client/app/account/profile/profileCtrl.js" />
         <option value="$PROJECT_DIR$/client/assets/svg/create.svg" />
-        <option value="$PROJECT_DIR$/client/app/account/profile/_profile.scss" />
         <option value="$PROJECT_DIR$/client/app/account/profile/profile.html" />
-        <option value="$PROJECT_DIR$/client/app/diaryContent/entryDialogCtrl.js" />
         <option value="$PROJECT_DIR$/client/app/diaryContent/entryDialog.html" />
         <option value="$PROJECT_DIR$/server/api/profile/index.js" />
-        <option value="$PROJECT_DIR$/server/api/profile/profileCtrl.js" />
-        <option value="$PROJECT_DIR$/client/app/navbar/navbar-directive.js" />
-        <option value="$PROJECT_DIR$/client/app/navbar/navbar.html" />
         <option value="$PROJECT_DIR$/client/app/navbar/_navbar.scss" />
+        <option value="$PROJECT_DIR$/client/app/allEntries/allEntries.html.css" />
+        <option value="$PROJECT_DIR$/client/assets/scss/base.scss" />
+        <option value="$PROJECT_DIR$/client/index.html" />
+        <option value="$PROJECT_DIR$/client/gulpfile-config.js" />
+        <option value="$PROJECT_DIR$/client/app/diaryContent/diaryContent.html" />
+        <option value="$PROJECT_DIR$/client/app/home/home.js" />
+        <option value="$PROJECT_DIR$/client/app/navbar/navbar-directive.js" />
+        <option value="$PROJECT_DIR$/client/app/service/userService.js" />
+        <option value="$PROJECT_DIR$/server/api/profile/profileCtrl.js" />
+        <option value="$PROJECT_DIR$/client/app/navbar/navbar.html" />
+        <option value="$PROJECT_DIR$/client/app/allEntries/_allEntries.scss" />
+        <option value="$PROJECT_DIR$/client/app/allEntries/allEntriesCtrl.js" />
+        <option value="$PROJECT_DIR$/client/app/diaryContent/entryDialogCtrl.js" />
+        <option value="$PROJECT_DIR$/client/app/allEntries/allEntries.html" />
+        <option value="$PROJECT_DIR$/client/app/account/profile/_profile.scss" />
       </list>
     </option>
   </component>
@@ -293,7 +275,79 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deep-blue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deep-blue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="profile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deep-blue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deep-blue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deep-blue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deep-blue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deep-blue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deep-blue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -315,6 +369,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deep-blue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deep-blue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="allEntries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -330,6 +406,7 @@
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -423,7 +500,8 @@
       <workItem from="1483769414521" duration="10583000" />
       <workItem from="1483944770127" duration="227000" />
       <workItem from="1484146379495" duration="10555000" />
-      <workItem from="1484237512908" duration="6697000" />
+      <workItem from="1484237512908" duration="6748000" />
+      <workItem from="1484290881114" duration="6735000" />
     </task>
     <task id="LOCAL-00001" summary="updates documentation">
       <created>1482827893098</created>
@@ -495,17 +573,24 @@
       <option name="project" value="LOCAL" />
       <updated>1484244383955</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="integrated login with fb,updated profile section">
+      <created>1484247018555</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1484247018555</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83298000" />
+    <option name="totallyTimeSpent" value="90084000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="71" y="-4" width="1529" height="904" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24983649" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24722041" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -541,48 +626,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/assets/scss/base.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="38" lean-forward="false" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/account/register/registerCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/assets/scss/_main.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="890" column="1" lean-forward="false" selection-start-line="890" selection-start-column="1" selection-end-line="890" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/footer/footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="43" lean-forward="false" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/footer/_footer.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="24" lean-forward="false" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/auth/auth.service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/api/diaryContent/index.js" />
     <entry file="file://$PROJECT_DIR$/server/routes.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -672,13 +715,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/home/home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="79" lean-forward="false" selection-start-line="13" selection-start-column="79" selection-end-line="13" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/config/dbconfig.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -700,49 +736,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="102" column="46" lean-forward="false" selection-start-line="102" selection-start-column="46" selection-end-line="102" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/diaryContent/_diaryContent.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="11" lean-forward="false" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/diaryContent/diaryContentCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="38" column="39" lean-forward="false" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
-          <folding>
-            <element signature="e#645#965#0" expanded="false" />
-            <element signature="e#1016#1139#0" expanded="false" />
-            <element signature="e#1225#1985#0" expanded="false" />
-            <element signature="e#2048#3640#0" expanded="false" />
-            <element signature="e#3688#4232#0" expanded="false" />
-            <element signature="e#4276#5019#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/service/userService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding>
-            <element signature="e#2719#3418#0" expanded="false" />
-            <element signature="e#3523#4168#0" expanded="false" />
-            <element signature="e#4221#4915#0" expanded="false" />
-            <element signature="e#5009#5709#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/home/_home.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -755,7 +748,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -763,7 +755,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="39" lean-forward="false" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -771,15 +762,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="516">
           <caret line="35" column="60" lean-forward="false" selection-start-line="35" selection-start-column="60" selection-end-line="35" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/home/homeCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="25" lean-forward="false" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -787,7 +769,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -795,7 +776,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="9" lean-forward="false" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -803,7 +783,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="36" lean-forward="true" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -811,6 +790,150 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="20" lean-forward="false" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/assets/svg/create.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="11" lean-forward="false" selection-start-line="0" selection-start-column="11" selection-end-line="0" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/navbar/_navbar.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/diaryContent/entryDialog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="83" lean-forward="false" selection-start-line="12" selection-start-column="83" selection-end-line="12" selection-end-column="83" />
+          <folding>
+            <element signature="n#style#0;n#md-dialog-content#0;n#form#0;n#md-dialog#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/assets/scss/_main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/assets/scss/base.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="34" lean-forward="false" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/diaryContent/_diaryContent.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="11" lean-forward="false" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/diaryContent/diaryContent.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="16" column="51" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="51" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#li#0;n#ul#0;n#div#0;n#md-content#0;n#md-sidenav#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/gulpfile-config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="99" column="18" lean-forward="false" selection-start-line="99" selection-start-column="18" selection-end-line="99" selection-end-column="18" />
+          <folding>
+            <marker date="1484291575806" expanded="true" signature="1636:1809" ph="..." />
+            <marker date="1484291575806" expanded="true" signature="1744:1776" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/diaryContent/diaryContent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="32" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/service/userService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="86" column="40" lean-forward="false" selection-start-line="86" selection-start-column="40" selection-end-line="86" selection-end-column="40" />
+          <folding>
+            <element signature="e#376#1021#0" expanded="false" />
+            <element signature="e#1136#1822#0" expanded="false" />
+            <element signature="e#3504#4203#0" expanded="false" />
+            <element signature="e#4308#4953#0" expanded="false" />
+            <element signature="e#5006#5700#0" expanded="false" />
+            <element signature="e#5794#6494#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/api/profile/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="63" lean-forward="false" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/api/profile/profileCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="197" column="104" lean-forward="false" selection-start-line="197" selection-start-column="104" selection-end-line="197" selection-end-column="104" />
+          <folding>
+            <element signature="e#658#2538#0" expanded="false" />
+            <element signature="e#2602#4407#0" expanded="false" />
+            <element signature="e#4468#6047#0" expanded="false" />
+            <element signature="e#7668#9150#0" expanded="false" />
+            <element signature="e#9210#10581#0" expanded="false" />
+            <element signature="e#10643#16700#0" expanded="false" />
+            <element signature="e#16757#21404#0" expanded="false" />
+            <element signature="e#21466#23000#0" expanded="false" />
+            <element signature="e#23058#24793#0" expanded="false" />
+            <element signature="e#24854#26735#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/navbar/navbar-directive.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="51" lean-forward="false" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/navbar/navbar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="84" lean-forward="false" selection-start-line="2" selection-start-column="84" selection-end-line="2" selection-end-column="84" />
           <folding />
         </state>
       </provider>
@@ -823,113 +946,85 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/assets/svg/create.svg">
+    <entry file="file://$PROJECT_DIR$/client/app/home/home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="11" lean-forward="false" selection-start-line="0" selection-start-column="11" selection-end-line="0" selection-end-column="11" />
+        <state relative-caret-position="420">
+          <caret line="28" column="18" lean-forward="false" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/account/profile/_profile.scss">
+    <entry file="file://$PROJECT_DIR$/client/app/home/homeCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        <state relative-caret-position="420">
+          <caret line="45" column="25" lean-forward="false" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
+          <folding>
+            <element signature="e#928#1459#0" expanded="false" />
+            <element signature="e#1498#1613#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/allEntries/_allEntries.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="16" lean-forward="false" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/diaryContent/diaryContent.js">
+    <entry file="file://$PROJECT_DIR$/client/app/diaryContent/diaryContentCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="32" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="32" />
+        <state relative-caret-position="450">
+          <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding>
+            <element signature="e#645#965#0" expanded="false" />
+            <element signature="e#1016#1139#0" expanded="false" />
+            <element signature="e#1225#1985#0" expanded="false" />
+            <element signature="e#2048#3640#0" expanded="false" />
+            <element signature="e#4276#5019#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/allEntries/allEntriesCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="26" column="45" lean-forward="true" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/diaryContent/entryDialogCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/app/account/profile/profile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="69" lean-forward="false" selection-start-line="2" selection-start-column="69" selection-end-line="2" selection-end-column="69" />
+        <state relative-caret-position="75">
+          <caret line="5" column="21" lean-forward="true" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/diaryContent/diaryContent.html">
+    <entry file="file://$PROJECT_DIR$/client/app/allEntries/allEntries.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="60" column="22" lean-forward="true" selection-start-line="44" selection-start-column="18" selection-end-line="60" selection-end-column="22" />
+        <state relative-caret-position="45">
+          <caret line="3" column="61" lean-forward="false" selection-start-line="3" selection-start-column="61" selection-end-line="3" selection-end-column="61" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/diaryContent/entryDialogCtrl.js">
+    <entry file="file://$PROJECT_DIR$/client/app/account/profile/_profile.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="63" lean-forward="false" selection-start-line="22" selection-start-column="63" selection-end-line="22" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/diaryContent/entryDialog.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="83" lean-forward="false" selection-start-line="12" selection-start-column="83" selection-end-line="12" selection-end-column="83" />
-          <folding>
-            <element signature="n#style#0;n#md-dialog-content#0;n#form#0;n#md-dialog#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/api/profile/profileCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="196" column="48" lean-forward="false" selection-start-line="196" selection-start-column="48" selection-end-line="196" selection-end-column="48" />
-          <folding>
-            <element signature="e#658#2538#0" expanded="false" />
-            <element signature="e#2602#4407#0" expanded="false" />
-            <element signature="e#4468#6047#0" expanded="false" />
-            <element signature="e#7673#9155#0" expanded="false" />
-            <element signature="e#9215#10586#0" expanded="false" />
-            <element signature="e#10648#16705#0" expanded="false" />
-            <element signature="e#16762#21409#0" expanded="false" />
-            <element signature="e#21471#23005#0" expanded="false" />
-            <element signature="e#23063#24798#0" expanded="false" />
-            <element signature="e#24859#26740#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/api/profile/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="67" lean-forward="true" selection-start-line="20" selection-start-column="67" selection-end-line="20" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/navbar/navbar-directive.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="59" lean-forward="false" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/navbar/navbar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="58" lean-forward="false" selection-start-line="2" selection-start-column="58" selection-end-line="2" selection-end-column="58" />
-          <folding>
-            <element signature="n#style#0;n#md-input-container#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/navbar/_navbar.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+        <state relative-caret-position="150">
+          <caret line="10" column="15" lean-forward="false" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
           <folding />
         </state>
       </provider>

@@ -194,8 +194,8 @@
             }
 
             var user_id = req.userId;
-            var tagKeyword = req.body.tagKeyword;
-            var sqlQuery = "SELECT * from entries  where user_id = :user_id AND :tagKeyword = ANY (tags), order by created_at DESC LIMIT 10";
+            var tagKeyword = req.body.search;
+            var sqlQuery = "SELECT * from entries  where user_id = :user_id AND :tagKeyword = ANY (tags) order by created_at DESC LIMIT 10";
 
             seq.sequelize.query(sqlQuery,{
                 replacements: {user_id:user_id,tagKeyword:tagKeyword},

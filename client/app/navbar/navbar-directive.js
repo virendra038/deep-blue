@@ -20,7 +20,11 @@
 
 
                         $scope.search = function(){
-                            console.log($scope.tagKeyword);
+                            $state.go('allEntries',{
+                                search:$scope.tagKeyword
+                            },{
+                                inherit:false
+                            })
                         };
 
                         $scope.logout = function(){
