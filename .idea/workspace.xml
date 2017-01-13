@@ -2,20 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8f232d1-abcd-432a-b337-844110f86b05" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/allEntries/_allEntries.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/allEntries/allEntries.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/allEntries/allEntriesCtrl.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/account/profile/_profile.scss" afterPath="$PROJECT_DIR$/client/app/account/profile/_profile.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/diaryContent/entryDialogCtrl.js" afterPath="$PROJECT_DIR$/client/app/diaryContent/entryDialogCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/home/home.js" afterPath="$PROJECT_DIR$/client/app/home/home.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/navbar/navbar-directive.js" afterPath="$PROJECT_DIR$/client/app/navbar/navbar-directive.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/navbar/navbar.html" afterPath="$PROJECT_DIR$/client/app/navbar/navbar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/service/userService.js" afterPath="$PROJECT_DIR$/client/app/service/userService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/css/base.css" afterPath="$PROJECT_DIR$/client/assets/css/base.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/scss/base.scss" afterPath="$PROJECT_DIR$/client/assets/scss/base.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/index.html" afterPath="$PROJECT_DIR$/client/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/api/profile/profileCtrl.js" afterPath="$PROJECT_DIR$/server/api/profile/profileCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/home/home.html" afterPath="$PROJECT_DIR$/client/app/home/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/home/homeCtrl.js" afterPath="$PROJECT_DIR$/client/app/home/homeCtrl.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -36,12 +25,45 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/api/profile/index.js">
+      <file leaf-file-name="navbar.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/app/navbar/navbar.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="63" lean-forward="false" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="63" />
+            <state relative-caret-position="30">
+              <caret line="2" column="84" lean-forward="false" selection-start-line="2" selection-start-column="84" selection-end-line="2" selection-end-column="84" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="navbar-directive.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/app/navbar/navbar-directive.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="73" lean-forward="true" selection-start-line="18" selection-start-column="73" selection-end-line="18" selection-end-column="73" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="authenticationService.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/app/service/authenticationService.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="441">
+              <caret line="58" column="16" lean-forward="false" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="homeCtrl.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/app/home/homeCtrl.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="41" lean-forward="false" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+              <folding>
+                <element signature="e#1041#1572#0" expanded="false" />
+                <element signature="e#1611#1726#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -56,11 +78,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_profile.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_profile.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/account/profile/_profile.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
               <caret line="10" column="15" lean-forward="false" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/app/home/home.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="54" lean-forward="false" selection-start-line="2" selection-start-column="54" selection-end-line="2" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -78,38 +110,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_allEntries.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/app/allEntries/_allEntries.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="16" lean-forward="false" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="profile.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/account/profile/profile.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
               <caret line="5" column="21" lean-forward="true" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="diaryContentCtrl.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/app/diaryContent/diaryContentCtrl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-              <folding>
-                <element signature="e#645#965#0" expanded="false" />
-                <element signature="e#1016#1139#0" expanded="false" />
-                <element signature="e#1225#1985#0" expanded="false" />
-                <element signature="e#2048#3640#0" expanded="false" />
-                <element signature="e#4276#5019#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -193,8 +199,6 @@
         <option value="$PROJECT_DIR$/client/app/diaryContent/diaryContentCtrl.js" />
         <option value="$PROJECT_DIR$/client/app/home/_home.scss" />
         <option value="$PROJECT_DIR$/server/config/environment/development.js" />
-        <option value="$PROJECT_DIR$/client/app/home/home.html" />
-        <option value="$PROJECT_DIR$/client/app/home/homeCtrl.js" />
         <option value="$PROJECT_DIR$/server/api/facebook/facebookCtrl.js" />
         <option value="$PROJECT_DIR$/client/app/account/profile/profileCtrl.js" />
         <option value="$PROJECT_DIR$/client/assets/svg/create.svg" />
@@ -217,6 +221,8 @@
         <option value="$PROJECT_DIR$/client/app/diaryContent/entryDialogCtrl.js" />
         <option value="$PROJECT_DIR$/client/app/allEntries/allEntries.html" />
         <option value="$PROJECT_DIR$/client/app/account/profile/_profile.scss" />
+        <option value="$PROJECT_DIR$/client/app/home/homeCtrl.js" />
+        <option value="$PROJECT_DIR$/client/app/home/home.html" />
       </list>
     </option>
   </component>
@@ -387,7 +393,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="allEntries" />
+              <option name="myItemId" value="navbar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deep-blue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deep-blue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="home" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -501,7 +529,7 @@
       <workItem from="1483944770127" duration="227000" />
       <workItem from="1484146379495" duration="10555000" />
       <workItem from="1484237512908" duration="6748000" />
-      <workItem from="1484290881114" duration="6735000" />
+      <workItem from="1484290881114" duration="7642000" />
     </task>
     <task id="LOCAL-00001" summary="updates documentation">
       <created>1482827893098</created>
@@ -580,11 +608,18 @@
       <option name="project" value="LOCAL" />
       <updated>1484247018555</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="integrated login with fb,updated profile section">
+      <created>1484300185008</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1484300185008</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90084000" />
+    <option name="totallyTimeSpent" value="90991000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="71" y="-4" width="1529" height="904" extended-state="6" />
@@ -684,13 +719,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="36" lean-forward="false" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/service/authenticationService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="831">
-          <caret line="63" column="18" lean-forward="false" selection-start-line="63" selection-start-column="18" selection-end-line="63" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -922,46 +950,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/navbar/navbar-directive.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="51" lean-forward="false" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/navbar/navbar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="84" lean-forward="false" selection-start-line="2" selection-start-column="84" selection-end-line="2" selection-end-column="84" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/home/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="43" column="51" lean-forward="true" selection-start-line="41" selection-start-column="38" selection-end-line="43" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/home/home.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="28" column="18" lean-forward="false" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/home/homeCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="45" column="25" lean-forward="false" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
-          <folding>
-            <element signature="e#928#1459#0" expanded="false" />
-            <element signature="e#1498#1613#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1025,6 +1018,49 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="15" lean-forward="false" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/navbar/navbar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="84" lean-forward="false" selection-start-line="2" selection-start-column="84" selection-end-line="2" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/navbar/navbar-directive.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="73" lean-forward="true" selection-start-line="18" selection-start-column="73" selection-end-line="18" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/service/authenticationService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="58" column="16" lean-forward="false" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/home/homeCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="41" lean-forward="false" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+          <folding>
+            <element signature="e#1041#1572#0" expanded="false" />
+            <element signature="e#1611#1726#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/home/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="54" lean-forward="false" selection-start-line="2" selection-start-column="54" selection-end-line="2" selection-end-column="54" />
           <folding />
         </state>
       </provider>

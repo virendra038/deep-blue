@@ -4,6 +4,9 @@ angular.module('deep-blue')
 
             var self = this;
 
+            self.isLoggedIn = userAuthenticationService.isLoggedIn();
+            console.log(self.isLoggedIn);
+
             self.login = function(){
 
                 var data = {
